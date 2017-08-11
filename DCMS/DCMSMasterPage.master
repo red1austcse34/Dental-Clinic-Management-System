@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DCMSMasterPage.master.cs" Inherits="DCMSMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1676px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width:1100px;margin:0 auto">
+        <tr style="width:1100px;height:50px">
+            <td style="width:80px">
+                <img src="Image/logo.png" style="height:120px; width:120px" />
+            </td>
+            <td style="font-family: Forte; font-size: xx-large; font-weight: lighter; font-style: normal; font-variant: normal; color: #3333FF;" 
+                class="style1">Rampura Ortho Dental Surgery</td>
+            <td style="width:900px;text-align:right">
+                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Image/FBlogo.png" 
+                    style="width:90px;height:90px" onclick="ImageButton1_Click"/>
+                <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Image/Tlogo.png" style="width:90px;height:90px"/>
+                <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/Image/GMlogo.png" 
+                    style="width:90px;height:90px" onclick="ImageButton3_Click"/>
+            </td>
+        </tr>
+        <tr style="width:1100px;height:40px;background-color:yellow">
+            <td colspan="3" bgcolor="#993399">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                    onmenuitemclick="Menu1_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BorderColor="Red" ForeColor="#66FF33" />
+                    <StaticMenuItemStyle Font-Size="Larger" ForeColor="White" 
+                        HorizontalPadding="30px" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PatientMasterPage.master.cs" Inherits="PatientMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 740px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width:1100px;margin:0 auto">
+        <tr style="width:1100px;height:50px">
+            <td style="width:80px">
+                <img src="Image/logo.png" style="height:120px; width:120px" />
+            </td>
+            <td class="style1"> 
+                <img src="Image/name.png" style="height:70px; width:570px" />
+
+            </td>
+            <td style="width:500px;text-align:right">
+                <asp:ImageButton ID="ImageButton1" runat="server" 
+                    ImageUrl="~/Image/FacebookLogo.png" style="width:90px;height:90px" 
+                    onclick="ImageButton1_Click" /> &nbsp;
+                <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Image/TwitterLogo.png" style="width:90px;height:90px" /> &nbsp;
+                <asp:ImageButton ID="ImageButton3" runat="server" 
+                    ImageUrl="~/Image/GoogleMapLogo.png" style="width:90px;height:90px" 
+                    onclick="ImageButton3_Click" />
+            </td>
+        </tr>
+        <tr style="width:1100px;height:40px;background-color:floralwhite">
+            <td colspan="3" "background-color="#993399">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Font-Bold="True" 
+                    Font-Names="Agency FB" Font-Size="Larger" onmenuitemclick="Menu1_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BorderColor="#000066" ForeColor="White" BackColor="#000066" />
+                    <StaticMenuItemStyle Font-Size="Larger" ForeColor="Black" 
+                        HorizontalPadding="30px" BorderColor="Black" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+
+    </form>
+</body>
+</html>
+
